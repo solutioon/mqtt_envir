@@ -1,5 +1,6 @@
 pyserial==3.5
 paho-mqtt==1.6.1
+DateTime==4.7
 certifi==2022.9.24
 chardet==5.0.0
 idna==3.4
