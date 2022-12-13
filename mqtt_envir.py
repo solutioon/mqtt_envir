@@ -16,11 +16,11 @@ f.write(time.ctime(time.time()) + ' Ejecutado script desde ' +os.getenv("USER")+
 f.close()
 
 #config broker
-broker_url = "IP_BROKER"
-broker_port = 1883  
+broker_url = os.getenv("BROKER_URL")
+broker_port = os.getenv("BROKER_PORT")  
 
 client = mqtt.Client()
-client.username_pw_set(username="usuariomqtt",password="passwordmqtt")
+client.username_pw_set(username=os.getenv("BROKER_USER"),password=os.getenv("BROKER_PWD"))
 client.connect(broker_url, broker_port) 
 
 now = datetime.utcnow()
