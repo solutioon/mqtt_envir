@@ -17,11 +17,11 @@ f.close()
 
 #config broker
 broker_url = os.getenv("BROKER_URL")
-broker_port = os.getenv(BROKER_PORT)  
+broker_port = os.getenv("BROKER_PORT")  
 
 client = mqtt.Client()
 client.username_pw_set(username=os.getenv("BROKER_USER"),password=os.getenv("BROKER_PWD"))
-client.connect(broker_url, broker_port) 
+client.connect(str(broker_url), int(broker_port)) 
 
 now = datetime.utcnow()
 print(now)
