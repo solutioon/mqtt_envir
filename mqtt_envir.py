@@ -11,9 +11,9 @@ import os
 
 
 #Escribir fichero de log
-f = open ('lee_potmqtt.log','w')
-f.write(time.ctime(time.time()) + ' Ejecutado script desde ' +os.getenv("USER")+'\n' )
-f.close()
+#f = open ('lee_potmqtt.log','w')
+#f.write(time.ctime(time.time()) + ' Ejecutado script desde ' +os.getenv("USER")+'\n' )
+#f.close()
 
 #config broker
 broker_url = os.getenv("BROKER_URL")
@@ -26,9 +26,9 @@ client.connect(str(broker_url), int(broker_port))
 now = datetime.utcnow()
 print(now)
 
-f = open ('lee_potmqtt.log','a')
-f.write(time.ctime(time.time()) + ' Conectado a broker '+ str(broker_url) + ' en puerto ' + str(broker_port)  +  '\n')
-f.close()
+#f = open ('lee_potmqtt.log','a')
+#f.write(time.ctime(time.time()) + ' Conectado a broker '+ str(broker_url) + ' en puerto ' + str(broker_port)  +  '\n')
+#f.close()
 
 
 
@@ -61,4 +61,4 @@ while True:
         sleep(10)
 
 
-f.close()
+#f.close()
